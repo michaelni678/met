@@ -479,6 +479,9 @@ impl sealed::Sealed for Ident {}
 
 /// Extension trait for [`Punct`].
 pub trait PunctExt: Sized + sealed::Sealed {
+    /// Construct a punct with the given span, character, and spacing.
+    fn new_spanned(span: Span, character: char, spacing: Spacing) -> Self;
+
     /// Checks if this punct is equal to `other`.
     fn equals(&self, other: &Self) -> bool;
 
@@ -493,6 +496,12 @@ pub trait PunctExt: Sized + sealed::Sealed {
 }
 
 impl PunctExt for Punct {
+    fn new_spanned(span: Span, character: char, spacing: Spacing) -> Self {
+        let mut punct = Punct::new(character, spacing);
+        punct.set_span(span);
+        punct
+    }
+
     fn equals(&self, other: &Self) -> bool {
         self.as_char() == other.as_char() && self.spacing() == other.spacing()
     }
