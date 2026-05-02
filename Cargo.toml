@@ -1,0 +1,27 @@
+[package]
+name = "met"
+version = "0.1.0"
+edition = "2024"
+authors = ["Michael Ni <michael.ni678@gmail.com>"]
+repository = "https://github.com/michaelni678/met"
+homepage = "https://github.com/michaelni678/met"
+readme = "README.md"
+license = "Apache-2.0"
+categories = ["development-tools::procedural-macro-helpers"]
+keywords = ["macros"]
+description = "Procedural macro extension traits"
+documentation = "https://docs.rs/met"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [
+    "--cfg",
+    "docsrs",
+    "--sort-modules-by-appearance",
+]
+
+[dependencies]
+proc-macro2 = "1"
+
+[dev-dependencies]
+quote = "1"
