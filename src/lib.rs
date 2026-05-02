@@ -10,7 +10,7 @@
 //! met = "0.1.0"
 //! proc-macro2 = "1"
 //! ```
-//! 
+//!
 //! [`proc-macro2`]: https://crates.io/crates/proc-macro2
 
 use proc_macro2::{Delimiter, Group, Ident, Literal, Punct, Spacing, Span, TokenStream, TokenTree};
