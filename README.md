@@ -10,7 +10,7 @@
 
 </div>
 
-**Met** provides several macros extension traits that make working with [`proc-macro2`] easier. 
+**Met** provides several macros and extension traits that make working with [`proc-macro2`] easier. 
 
 # Setup
 
