@@ -1,5 +1,5 @@
 //! **Met** provides several macros and extension traits that make working with
-//! `proc-macro2` easier.
+//! [`proc-macro2`] easier.
 //!
 //! # Setup
 //!
@@ -10,6 +10,8 @@
 //! met = "0.1.0"
 //! proc-macro2 = "1"
 //! ```
+//! 
+//! [`proc-macro2`]: https://crates.io/crates/proc-macro2
 
 use proc_macro2::{Delimiter, Group, Ident, Literal, Punct, Spacing, Span, TokenStream, TokenTree};
 

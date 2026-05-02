@@ -10,7 +10,7 @@
 
 </div>
 
-**Met** provides several macros extension traits that make working with `proc-macro2` easier. 
+**Met** provides several macros extension traits that make working with [`proc-macro2`] easier. 
 
 # Setup
 
@@ -21,3 +21,5 @@ Add this to your `Cargo.toml`:
 met = "0.1.0"
 proc-macro2 = "1"
 ```
+
+[`proc-macro2`]: https://crates.io/crates/proc-macro2
