@@ -25,36 +25,36 @@ mod sealed {
 /// # Examples
 ///
 /// ```
-/// # use met::TokenStreamExt;
+/// # use met::assert_stream_eq;
 /// use met::stream;
 /// use quote::quote;
 ///
-/// let stream = stream! {
+/// let a = stream! {
 ///     impl MyTrait for MyStruct {}
 /// };
 ///
-/// let quote = quote! {
+/// let b = quote! {
 ///     impl MyTrait for MyStruct {}
 /// };
 ///
-/// assert!(stream.equals(&quote));
+/// assert_stream_eq!(a, b);
 /// ```
 ///
 /// When `#` is followed by an ident, `quote!` performs variable
 /// interpolation, but `stream!` does not.
 ///
 /// ```
-/// # use met::TokenStreamExt;
+/// # use met::assert_stream_ne;
 /// use met::stream;
 /// use quote::quote;
 ///
 /// let variable = 5;
 ///
-/// let stream = stream! { # variable };
-/// let quote = quote! { # variable };
+/// let a = stream! { # variable };
+/// let b = quote! { # variable };
 ///
 /// // Not equal, `stream!` doesn't interpolate!
-/// assert!(!stream.equals(&quote));
+/// assert_stream_ne!(a, b);
 /// ```
 ///
 /// [`quote::quote!`]: https://docs.rs/quote/latest/quote/macro.quote.html
@@ -83,13 +83,13 @@ macro_rules! tree {
 /// # Examples
 ///
 /// ```
-/// # use met::{GroupExt, TokenStreamExt, stream};
+/// # use met::{GroupExt, assert_stream_eq, stream};
 /// use met::group;
 ///
 /// let group = group! { [1, 2, 3] };
 ///
 /// assert!(group.is_bracketed());
-/// assert!(group.stream().equals(&stream! { 1, 2, 3 }));
+/// assert_stream_eq!(group.stream(), stream! { 1, 2, 3 });
 /// ```
 ///
 /// If the token isn't a group, the macro will panic.
@@ -186,6 +186,22 @@ macro_rules! literal {
     };
 }
 
+/// Convenience macro for checking token stream equality.
+#[macro_export]
+macro_rules! assert_stream_eq {
+    ($left:expr, $right:expr) => {
+        assert!($crate::TokenStreamExt::equals(&$left, &$right));
+    };
+}
+
+/// Convenience macro for checking token stream inequality.
+#[macro_export]
+macro_rules! assert_stream_ne {
+    ($left:expr, $right:expr) => {
+        assert!(!$crate::TokenStreamExt::equals(&$left, &$right));
+    };
+}
+
 /// Extension trait for [`TokenStream`].
 pub trait TokenStreamExt: Sized + sealed::Sealed {
     /// Checks if the token stream is equal to `other`.
@@ -227,18 +243,18 @@ pub trait TokenStreamExt: Sized + sealed::Sealed {
     /// # Examples
     ///
     /// ```
-    /// # use met::stream;
+    /// # use met::{assert_stream_eq, stream};
     /// # use proc_macro2::{Ident, Literal, Punct, Spacing, Span, TokenStream};
     /// use met::TokenStreamExt;
     ///
-    /// let mut stream = TokenStream::new();
+    /// let mut expression = TokenStream::new();
     ///
-    /// stream.append(Ident::new("variable", Span::call_site()));
-    /// stream.append(Punct::new('=', Spacing::Joint));
-    /// stream.append(Punct::new('=', Spacing::Alone));
-    /// stream.append(Literal::isize_unsuffixed(100));
+    /// expression.append(Ident::new("variable", Span::call_site()));
+    /// expression.append(Punct::new('=', Spacing::Joint));
+    /// expression.append(Punct::new('=', Spacing::Alone));
+    /// expression.append(Literal::isize_unsuffixed(100));
     ///
-    /// assert!(stream.equals(&stream! { variable == 100 }));
+    /// assert_stream_eq!(expression, stream! { variable == 100 });
     /// ```
     fn append<T>(&mut self, token: T)
     where
