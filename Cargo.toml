@@ -9,7 +9,7 @@ readme = "README.md"
 license = "Apache-2.0"
 categories = ["development-tools::procedural-macro-helpers"]
 keywords = ["macros"]
-description = "Procedural macro extension traits"
+description = "Macros and extension traits for proc-macro2"
 documentation = "https://docs.rs/met"
 
 [package.metadata.docs.rs]

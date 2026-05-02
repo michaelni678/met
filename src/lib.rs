@@ -1,5 +1,5 @@
-//! **Met** provides several extension traits that make working with token trees
-//! easier.
+//! **Met** provides several macros and extension traits that make working with
+//! `proc-macro2` easier.
 //!
 //! # Setup
 //!
@@ -8,6 +8,7 @@
 //! ```toml
 //! [dependencies]
 //! met = "0.1.0"
+//! proc-macro2 = "1"
 //! ```
 
 use proc_macro2::{Delimiter, Group, Ident, Literal, Punct, Spacing, Span, TokenStream, TokenTree};

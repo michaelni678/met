@@ -1,5 +1,5 @@
 <h1 align="center">Met</h1>
-<h3 align="center">Procedural macro extension traits</h3>
+<h3 align="center">Macros and extension traits for proc-macro2</h3>
 <div align="center">
 
 [![docs.rs](https://img.shields.io/badge/docs.rs-met-58a78a?style=for-the-badge&logo=Docs.rs)](https://docs.rs/met)
@@ -10,7 +10,7 @@
 
 </div>
 
-**Met** provides several extension traits that make working with token trees easier. 
+**Met** provides several macros extension traits that make working with `proc-macro2` easier. 
 
 # Setup
 
@@ -19,4 +19,5 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 met = "0.1.0"
+proc-macro2 = "1"
 ```
