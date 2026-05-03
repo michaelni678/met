@@ -526,302 +526,302 @@ impl sealed::Sealed for Punct {}
 /// Extension trait for [`Literal`].
 pub trait LiteralExt: Sized + sealed::Sealed {
     /// Construct a suffixed `i8` literal with the given span and integer.
-    fn new_i8_suffixed_spanned(span: Span, integer: i8) -> Self;
+    fn i8_suffixed_spanned(span: Span, integer: i8) -> Self;
 
     /// Construct an unsuffixed `i8` literal with the given span and integer.
-    fn new_i8_unsuffixed_spanned(span: Span, integer: i8) -> Self;
+    fn i8_unsuffixed_spanned(span: Span, integer: i8) -> Self;
 
     /// Construct a suffixed `i16` literal with the given span and integer.
-    fn new_i16_suffixed_spanned(span: Span, integer: i16) -> Self;
+    fn i16_suffixed_spanned(span: Span, integer: i16) -> Self;
 
     /// Construct an unsuffixed `i16` literal with the given span and integer.
-    fn new_i16_unsuffixed_spanned(span: Span, integer: i16) -> Self;
+    fn i16_unsuffixed_spanned(span: Span, integer: i16) -> Self;
 
     /// Construct a suffixed `u32` literal with the given span and integer.
-    fn new_i32_suffixed_spanned(span: Span, integer: i32) -> Self;
+    fn i32_suffixed_spanned(span: Span, integer: i32) -> Self;
 
     /// Construct an unsuffixed `u32` literal with the given span and integer.
-    fn new_i32_unsuffixed_spanned(span: Span, integer: i32) -> Self;
+    fn i32_unsuffixed_spanned(span: Span, integer: i32) -> Self;
 
     /// Construct a suffixed `i64` literal with the given span and integer.
-    fn new_i64_suffixed_spanned(span: Span, integer: i64) -> Self;
+    fn i64_suffixed_spanned(span: Span, integer: i64) -> Self;
 
     /// Construct an unsuffixed `i64` literal with the given span and integer.
-    fn new_i64_unsuffixed_spanned(span: Span, integer: i64) -> Self;
+    fn i64_unsuffixed_spanned(span: Span, integer: i64) -> Self;
 
     /// Construct a suffixed `i128` literal with the given span and integer.
-    fn new_i128_suffixed_spanned(span: Span, integer: i128) -> Self;
+    fn i128_suffixed_spanned(span: Span, integer: i128) -> Self;
 
     /// Construct an unsuffixed `i128` literal with the given span and integer.
-    fn new_i128_unsuffixed_spanned(span: Span, integer: i128) -> Self;
+    fn i128_unsuffixed_spanned(span: Span, integer: i128) -> Self;
 
     /// Construct a suffixed `isize` literal with the given span and integer.
-    fn new_isize_suffixed_spanned(span: Span, integer: isize) -> Self;
+    fn isize_suffixed_spanned(span: Span, integer: isize) -> Self;
 
     /// Construct an unsuffixed `isize` literal with the given span and integer.
-    fn new_isize_unsuffixed_spanned(span: Span, integer: isize) -> Self;
+    fn isize_unsuffixed_spanned(span: Span, integer: isize) -> Self;
 
     /// Construct a suffixed `u8` literal with the given span and integer.
-    fn new_u8_suffixed_spanned(span: Span, integer: u8) -> Self;
+    fn u8_suffixed_spanned(span: Span, integer: u8) -> Self;
 
     /// Construct an unsuffixed `u8` literal with the given span and integer.
-    fn new_u8_unsuffixed_spanned(span: Span, integer: u8) -> Self;
+    fn u8_unsuffixed_spanned(span: Span, integer: u8) -> Self;
 
     /// Construct a suffixed `u16` literal with the given span and integer.
-    fn new_u16_suffixed_spanned(span: Span, integer: u16) -> Self;
+    fn u16_suffixed_spanned(span: Span, integer: u16) -> Self;
 
     /// Construct an unsuffixed `u16` literal with the given span and integer.
-    fn new_u16_unsuffixed_spanned(span: Span, integer: u16) -> Self;
+    fn u16_unsuffixed_spanned(span: Span, integer: u16) -> Self;
 
     /// Construct a suffixed `u32` literal with the given span and integer.
-    fn new_u32_suffixed_spanned(span: Span, integer: u32) -> Self;
+    fn u32_suffixed_spanned(span: Span, integer: u32) -> Self;
 
     /// Construct an unsuffixed `u32` literal with the given span and integer.
-    fn new_u32_unsuffixed_spanned(span: Span, integer: u32) -> Self;
+    fn u32_unsuffixed_spanned(span: Span, integer: u32) -> Self;
 
     /// Construct a suffixed `u64` literal with the given span and integer.
-    fn new_u64_suffixed_spanned(span: Span, integer: u64) -> Self;
+    fn u64_suffixed_spanned(span: Span, integer: u64) -> Self;
 
     /// Construct an unsuffixed `u64` literal with the given span and integer.
-    fn new_u64_unsuffixed_spanned(span: Span, integer: u64) -> Self;
+    fn u64_unsuffixed_spanned(span: Span, integer: u64) -> Self;
 
     /// Construct a suffixed `u128` literal with the given span and integer.
-    fn new_u128_suffixed_spanned(span: Span, integer: u128) -> Self;
+    fn u128_suffixed_spanned(span: Span, integer: u128) -> Self;
 
     /// Construct an unsuffixed `u128` literal with the given span and integer.
-    fn new_u128_unsuffixed_spanned(span: Span, integer: u128) -> Self;
+    fn u128_unsuffixed_spanned(span: Span, integer: u128) -> Self;
 
     /// Construct a suffixed `usize` literal with the given span and integer.
-    fn new_usize_suffixed_spanned(span: Span, integer: usize) -> Self;
+    fn usize_suffixed_spanned(span: Span, integer: usize) -> Self;
 
     /// Construct an unsuffixed `usize` literal with the given span and integer.
-    fn new_usize_unsuffixed_spanned(span: Span, integer: usize) -> Self;
+    fn usize_unsuffixed_spanned(span: Span, integer: usize) -> Self;
 
     /// Construct a suffixed `f32` literal with the given span and float.
-    fn new_f32_suffixed_spanned(span: Span, float: f32) -> Self;
+    fn f32_suffixed_spanned(span: Span, float: f32) -> Self;
 
     /// Construct an unsuffixed `f32` literal with the given span and float.
-    fn new_f32_unsuffixed_spanned(span: Span, float: f32) -> Self;
+    fn f32_unsuffixed_spanned(span: Span, float: f32) -> Self;
 
     /// Construct a suffixed `f64` literal with the given span and float.
-    fn new_f64_suffixed_spanned(span: Span, float: f64) -> Self;
+    fn f64_suffixed_spanned(span: Span, float: f64) -> Self;
 
     /// Construct an unsuffixed `f64` literal with the given span and float.
-    fn new_f64_unsuffixed_spanned(span: Span, float: f64) -> Self;
+    fn f64_unsuffixed_spanned(span: Span, float: f64) -> Self;
 
     /// Construct a string literal with the given span and string.
-    fn new_string_spanned(span: Span, string: &str) -> Self;
+    fn string_spanned(span: Span, string: &str) -> Self;
 
     /// Construct a byte string literal with the given span and bytes.
-    fn new_byte_string_spanned(span: Span, bytes: &[u8]) -> Self;
+    fn byte_string_spanned(span: Span, bytes: &[u8]) -> Self;
 
     /// Construct a C-string literal with the given span and c-string.
-    fn new_c_string_spanned(span: Span, string: &CStr) -> Self;
+    fn c_string_spanned(span: Span, string: &CStr) -> Self;
 
     /// Construct a `char` literal with the given span and character.
-    fn new_character_spanned(span: Span, character: char) -> Self;
+    fn character_spanned(span: Span, character: char) -> Self;
 
     /// Construct a byte character literal with the given span and byte.
-    fn new_byte_character_spanned(span: Span, byte: u8) -> Self;
+    fn byte_character_spanned(span: Span, byte: u8) -> Self;
 
     /// Checks if this literal is equal to `other`.
     fn equals(&self, other: &Self) -> bool;
 }
 
 impl LiteralExt for Literal {
-    fn new_i8_suffixed_spanned(span: Span, integer: i8) -> Self {
+    fn i8_suffixed_spanned(span: Span, integer: i8) -> Self {
         let mut literal = Self::i8_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i8_unsuffixed_spanned(span: Span, integer: i8) -> Self {
+    fn i8_unsuffixed_spanned(span: Span, integer: i8) -> Self {
         let mut literal = Self::i8_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i16_suffixed_spanned(span: Span, integer: i16) -> Self {
+    fn i16_suffixed_spanned(span: Span, integer: i16) -> Self {
         let mut literal = Self::i16_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i16_unsuffixed_spanned(span: Span, integer: i16) -> Self {
+    fn i16_unsuffixed_spanned(span: Span, integer: i16) -> Self {
         let mut literal = Self::i16_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i32_suffixed_spanned(span: Span, integer: i32) -> Self {
+    fn i32_suffixed_spanned(span: Span, integer: i32) -> Self {
         let mut literal = Self::i32_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i32_unsuffixed_spanned(span: Span, integer: i32) -> Self {
+    fn i32_unsuffixed_spanned(span: Span, integer: i32) -> Self {
         let mut literal = Self::i32_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i64_suffixed_spanned(span: Span, integer: i64) -> Self {
+    fn i64_suffixed_spanned(span: Span, integer: i64) -> Self {
         let mut literal = Self::i64_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i64_unsuffixed_spanned(span: Span, integer: i64) -> Self {
+    fn i64_unsuffixed_spanned(span: Span, integer: i64) -> Self {
         let mut literal = Self::i64_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i128_suffixed_spanned(span: Span, integer: i128) -> Self {
+    fn i128_suffixed_spanned(span: Span, integer: i128) -> Self {
         let mut literal = Self::i128_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_i128_unsuffixed_spanned(span: Span, integer: i128) -> Self {
+    fn i128_unsuffixed_spanned(span: Span, integer: i128) -> Self {
         let mut literal = Self::i128_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_isize_suffixed_spanned(span: Span, integer: isize) -> Self {
+    fn isize_suffixed_spanned(span: Span, integer: isize) -> Self {
         let mut literal = Self::isize_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_isize_unsuffixed_spanned(span: Span, integer: isize) -> Self {
+    fn isize_unsuffixed_spanned(span: Span, integer: isize) -> Self {
         let mut literal = Self::isize_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u8_suffixed_spanned(span: Span, integer: u8) -> Self {
+    fn u8_suffixed_spanned(span: Span, integer: u8) -> Self {
         let mut literal = Self::u8_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u8_unsuffixed_spanned(span: Span, integer: u8) -> Self {
+    fn u8_unsuffixed_spanned(span: Span, integer: u8) -> Self {
         let mut literal = Self::u8_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u16_suffixed_spanned(span: Span, integer: u16) -> Self {
+    fn u16_suffixed_spanned(span: Span, integer: u16) -> Self {
         let mut literal = Self::u16_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u16_unsuffixed_spanned(span: Span, integer: u16) -> Self {
+    fn u16_unsuffixed_spanned(span: Span, integer: u16) -> Self {
         let mut literal = Self::u16_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u32_suffixed_spanned(span: Span, integer: u32) -> Self {
+    fn u32_suffixed_spanned(span: Span, integer: u32) -> Self {
         let mut literal = Self::u32_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u32_unsuffixed_spanned(span: Span, integer: u32) -> Self {
+    fn u32_unsuffixed_spanned(span: Span, integer: u32) -> Self {
         let mut literal = Self::u32_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u64_suffixed_spanned(span: Span, integer: u64) -> Self {
+    fn u64_suffixed_spanned(span: Span, integer: u64) -> Self {
         let mut literal = Self::u64_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u64_unsuffixed_spanned(span: Span, integer: u64) -> Self {
+    fn u64_unsuffixed_spanned(span: Span, integer: u64) -> Self {
         let mut literal = Self::u64_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u128_suffixed_spanned(span: Span, integer: u128) -> Self {
+    fn u128_suffixed_spanned(span: Span, integer: u128) -> Self {
         let mut literal = Self::u128_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_u128_unsuffixed_spanned(span: Span, integer: u128) -> Self {
+    fn u128_unsuffixed_spanned(span: Span, integer: u128) -> Self {
         let mut literal = Self::u128_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_usize_suffixed_spanned(span: Span, integer: usize) -> Self {
+    fn usize_suffixed_spanned(span: Span, integer: usize) -> Self {
         let mut literal = Self::usize_suffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_usize_unsuffixed_spanned(span: Span, integer: usize) -> Self {
+    fn usize_unsuffixed_spanned(span: Span, integer: usize) -> Self {
         let mut literal = Self::usize_unsuffixed(integer);
         literal.set_span(span);
         literal
     }
 
-    fn new_f32_suffixed_spanned(span: Span, float: f32) -> Self {
+    fn f32_suffixed_spanned(span: Span, float: f32) -> Self {
         let mut literal = Self::f32_suffixed(float);
         literal.set_span(span);
         literal
     }
 
-    fn new_f32_unsuffixed_spanned(span: Span, float: f32) -> Self {
+    fn f32_unsuffixed_spanned(span: Span, float: f32) -> Self {
         let mut literal = Self::f32_unsuffixed(float);
         literal.set_span(span);
         literal
     }
 
-    fn new_f64_suffixed_spanned(span: Span, float: f64) -> Self {
+    fn f64_suffixed_spanned(span: Span, float: f64) -> Self {
         let mut literal = Self::f64_suffixed(float);
         literal.set_span(span);
         literal
     }
 
-    fn new_f64_unsuffixed_spanned(span: Span, float: f64) -> Self {
+    fn f64_unsuffixed_spanned(span: Span, float: f64) -> Self {
         let mut literal = Self::f64_unsuffixed(float);
         literal.set_span(span);
         literal
     }
 
-    fn new_string_spanned(span: Span, string: &str) -> Self {
+    fn string_spanned(span: Span, string: &str) -> Self {
         let mut literal = Self::string(string);
         literal.set_span(span);
         literal
     }
 
-    fn new_byte_string_spanned(span: Span, bytes: &[u8]) -> Self {
+    fn byte_string_spanned(span: Span, bytes: &[u8]) -> Self {
         let mut literal = Self::byte_string(bytes);
         literal.set_span(span);
         literal
     }
 
-    fn new_c_string_spanned(span: Span, string: &CStr) -> Self {
+    fn c_string_spanned(span: Span, string: &CStr) -> Self {
         let mut literal = Self::c_string(string);
         literal.set_span(span);
         literal
     }
 
-    fn new_character_spanned(span: Span, character: char) -> Self {
+    fn character_spanned(span: Span, character: char) -> Self {
         let mut literal = Self::character(character);
         literal.set_span(span);
         literal
     }
 
-    fn new_byte_character_spanned(span: Span, byte: u8) -> Self {
+    fn byte_character_spanned(span: Span, byte: u8) -> Self {
         let mut literal = Self::byte_character(byte);
         literal.set_span(span);
         literal
