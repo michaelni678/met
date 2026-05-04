@@ -209,6 +209,9 @@ macro_rules! assert_stream_ne {
 
 /// Extension trait for [`TokenStream`].
 pub trait TokenStreamExt: Sized + sealed::Sealed {
+    /// Construct a token stream from a single token.
+    fn token(token: impl Into<TokenTree>) -> Self;
+
     /// Checks if the token stream is equal to `other`.
     ///
     /// # Examples
@@ -267,6 +270,10 @@ pub trait TokenStreamExt: Sized + sealed::Sealed {
 }
 
 impl TokenStreamExt for TokenStream {
+    fn token(token: impl Into<TokenTree>) -> Self {
+        Self::from(token.into())
+    }
+
     fn equals(&self, other: &Self) -> bool {
         let mut this = self.clone().into_iter();
         let mut other = other.clone().into_iter();
