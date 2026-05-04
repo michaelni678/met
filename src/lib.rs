@@ -544,10 +544,10 @@ pub trait LiteralExt: Sized + sealed::Sealed {
     /// Construct an unsuffixed `i16` literal with the given span and integer.
     fn i16_unsuffixed_spanned(span: Span, integer: i16) -> Self;
 
-    /// Construct a suffixed `u32` literal with the given span and integer.
+    /// Construct a suffixed `i32` literal with the given span and integer.
     fn i32_suffixed_spanned(span: Span, integer: i32) -> Self;
 
-    /// Construct an unsuffixed `u32` literal with the given span and integer.
+    /// Construct an unsuffixed `i32` literal with the given span and integer.
     fn i32_unsuffixed_spanned(span: Span, integer: i32) -> Self;
 
     /// Construct a suffixed `i64` literal with the given span and integer.
